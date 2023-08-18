@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Jost', sans-serif;
-    list-style: none;
+    /* list-style: none; */
     text-decoration: none;
     scroll-behavior: smooth;
 }
@@ -48,6 +48,7 @@ header {
 
 .navlist {
     display: flex;
+    list-style: none;
 }
 
 .navlist li {
@@ -307,7 +308,7 @@ header.sticky {
     border-radius: 12px;
     padding: 45px 45px 45px 45px;
     transition: ease .45s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .s img {
@@ -330,6 +331,26 @@ header.sticky {
     /* will-change: transform;
     transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05); */
     transform: scale(1.02);
+}
+
+.features {
+    padding-left: 15px;
+    color: var(--second-color);
+}
+
+.btn-projects {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-code {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    font-size: var(--p-font);
+    padding: 10px 20px;
+    border-radius: 30px;
 }
 
 .contact {
@@ -504,7 +525,7 @@ header.sticky {
     }
 
     .home-img img {
-        width: 440px;
+        width: 350px;
         height: auto;
     }
 
@@ -517,13 +538,59 @@ header.sticky {
         margin-bottom: 30px;
     }
 
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
     :root {
         --big-font: 3.4rem;
         --h2-font: 2rem;
     }
 
-    section {
+    /* section {
         padding: 65px 3%;
         transition: .3s;
+    } */
+
+    .sub-box {
+        padding: 45px 0;
+        transition: ease .05s;
+    }
+} 
+
+
+@media (max-width: 470px) {
+
+    .home-img img {
+        width: 250px;
+        height: auto;
+    }
+
+    .sub-box {
+        padding: 10px 10px;
+    }
+
+    .sub-box:hover{
+        box-shadow: none;
+        border-radius: 12px;
+        will-change: transform;
+        transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05,1.05,1.05);
+    }
+
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+
+    .items {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    .sub-img img {
+        width: 40px;
+    }
+
+    .footer p {
+        font-size: 0.7rem;
     }
 } 
